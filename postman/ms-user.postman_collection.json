@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "5d8ec410-24fb-420f-b3b6-cdd9fecf9cc4",
+		"name": "ms-user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Inserta usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"kathy 5\",\r\n    \"email\": \"katherine2@gmail.com\",\r\n    \"password\": \"clave1264\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": 1236,\r\n            \"citycode\": \"09\",\r\n            \"countrycode\": \"+569\"\r\n        },\r\n         {\r\n            \"number\": 123877855,\r\n            \"citycode\": \"88\",\r\n            \"countrycode\": \"+569\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Usuario por token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/user/login?token=28e72d24-edf2-4d74-87a6-0864ec37334b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "28e72d24-edf2-4d74-87a6-0864ec37334b"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
