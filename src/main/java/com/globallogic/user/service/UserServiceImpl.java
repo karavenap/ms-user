@@ -49,6 +49,8 @@ public class UserServiceImpl implements UserService {
                         ResponseUser.builder().
                         uuid(user.getUuid()).
                         created(user.getCreated()).
+                        lastLogin(user.getLastLogin()).
+                        token(user.getToken()).
                         isActive(user.getIsActive()).
                         build());
             }else {
